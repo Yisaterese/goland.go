@@ -1,17 +1,20 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func checkBoardPattern() {
-	for z := 1; z < 8; z++ {
-		for i := 1; i < 8; i++ {
-			fmt.Print("* ")
+	for i := 1; i < 8; i++ {
+		for j := 1; j <= 8; j++ {
+			if i%2 == 0 {
+				fmt.Print("* ")
+			} else {
+				fmt.Print(" *")
+			}
 		}
 		fmt.Println()
 	}
 }
 func main() {
 	checkBoardPattern()
+
 }
